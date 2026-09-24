@@ -17,6 +17,11 @@ double fallHeight(double t) {
     return g * t * t / 2;
 }
 
+// Время падения
+double fallTime(double h) {
+    return sqrt(2 * h / g);
+}
+
 // ===== Главная функция: меню =====
 
 int main() {
@@ -49,7 +54,9 @@ int main() {
             break;
 
         case 3:
-
+            cout << "Введите высоту h: ";
+            cin >> h;
+            cout << "Время падения t = " << fallTime(h) << "\n";
             break;
 
         case 0:
